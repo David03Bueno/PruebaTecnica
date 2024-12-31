@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+    <!-- <v-navigation-drawer class="br-teal-darken-4" theme="dark" permanent>
+
+      <v-list-item link to="/" title="Productos" prepend-icon="mdi-bell">
+      </v-list-item>
+    </v-navigation-drawer> -->
+
+    <v-main>
+      <AppBar />
+      <router-view />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import HelloWorld from './components/HelloWorld.vue'
+import AppBar from './components/AppBar.vue'
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
+    AppBar,
+  },
+
+  data: () => ({
+    //
+  }),
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
